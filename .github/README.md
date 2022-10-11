@@ -15,7 +15,7 @@ and the Flutter guide for
 
 [CryptoFonts](https://www.cryptofonts.com) is the biggest open-source library with more than 1000 cryptocurrency icons.
 
-![Demo](.github/demo.gif)
+![Demo](./demo.gif)
 
 ## Features
 
