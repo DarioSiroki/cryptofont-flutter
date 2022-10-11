@@ -1,0 +1,24 @@
+name: cryptofont
+description: CryptoFonts is the biggest open-source library with more than 1000 cryptocurrency icons.
+version: 1.0.0
+homepage: https://www.cryptofonts.com/
+# TODO
+# repository:
+# issue_tracker:
+
+environment:
+  sdk: ">=2.18.2 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+
+flutter:
+  fonts:
+    - family: cryptofont
+      fonts:
+        - asset: assets/cryptofont.ttf
