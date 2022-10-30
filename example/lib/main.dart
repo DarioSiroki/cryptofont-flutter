@@ -73,27 +73,28 @@ class _CryptoFontGalleryHomeState extends State<CryptoFontGalleryHome> {
               ),
               const SizedBox(height: 20),
               Expanded(
-                child: GridView.count(
-                  primary: false,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                  crossAxisCount: 4,
-                  children: cryptoFontIconMapping.entries
-                      .where((element) => element.key
-                          .toUpperCase()
-                          .startsWith(searchedTerm.toUpperCase()))
-                      .map((e) {
-                    final symbol = e.key;
-                    return Column(
-                      children: [
-                        Icon(CryptoFontIcons.fromSymbol(symbol), size: 36),
-                        const SizedBox(height: 10),
-                        Text(symbol,
-                            style:
-                                const TextStyle(fontWeight: FontWeight.w500)),
-                      ],
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    return GridView.count(
+                      crossAxisCount: constraints.maxWidth ~/ 100,
+                      children: cryptoFontIconMapping.entries
+                          .where((element) => element.key
+                              .toUpperCase()
+                              .startsWith(searchedTerm.toUpperCase()))
+                          .map((e) {
+                        final symbol = e.key;
+                        return Column(
+                          children: [
+                            Icon(CryptoFontIcons.fromSymbol(symbol), size: 36),
+                            const SizedBox(height: 10),
+                            Text(symbol,
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.w500)),
+                          ],
+                        );
+                      }).toList(),
                     );
-                  }).toList(),
+                  },
                 ),
               ),
             ],
