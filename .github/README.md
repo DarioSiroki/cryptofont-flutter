@@ -14,6 +14,9 @@ class MyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Get the icon code if you need it
+    final code = cryptoFontIconMapping[symbol.toLowerCase()];
+
     return Row(
       children: [
         // Use directly
