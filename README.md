@@ -2,7 +2,7 @@
 
 [CryptoFonts](https://www.cryptofonts.com) is the biggest open-source library with more than 1000 cryptocurrency icons.
 
-![Demo](.github/demo.gif)
+<img src="https://raw.githubusercontent.com/DarioSiroki/cryptofont-flutter/main/.github/demo.gif" width="300" />
 
 ## Usage
 
